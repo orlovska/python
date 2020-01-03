@@ -1,3 +1,7 @@
+# Return the words of the initial song in a dubsteb remix.
+#  Separate the words with a space.
+
+
 def song_decoder(song):
     list_of_words = song.split("WUB")
     while "" in list_of_words:
