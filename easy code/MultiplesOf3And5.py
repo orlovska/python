@@ -6,22 +6,14 @@
 
 def sum_of_multiples(num1, num2, numbers_below):
     lst = []
-    mult = 1 * num1
-    while mult < numbers_below:
-        for x in range(2, numbers_below):
-            mult == x * num1
-            lst.append(mult)
-    mult = 1 * num2
-    while mult < numbers_below:
-        for x in range(2, numbers_below):
-            mult == x * num2
-
-            if mult not in lst:
-                lst.append(mult)
-    print(lst)
-
+    for x in range(1, numbers_below // num1 + 1):
+        if x * num1 < numbers_below:
+            lst.append(x * num1)
+    for x1 in range(1, numbers_below // num1 + 1):
+        if num2 * x1 not in lst and num2 * x1 < numbers_below:
+            lst.append(x1 * num2)
     return sum(lst)
 
 
 print(sum_of_multiples(3, 5, 10))
-
+print(sum_of_multiples(3, 5, 1000))

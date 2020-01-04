@@ -5,18 +5,12 @@
 
 
 def digital_root(n):
-    num = str(n)
-    while len(num) > 1:
-        summ = []
-        for count in range(len(num)):
-            summ.append(num[count])
-        collect = 0
-        for number in summ:
-            collect += int(number)
-        num = ""
-        num += str(collect)
-    return int(num)
+    n = str(n)
+    if len(n) == 1:
+        return int(n)
+    else:
+        n = int(n[0]) + digital_root(int(n[1:]))
+        return n
 
 
-print(digital_root(16))
-
+print(digital_root(162))
