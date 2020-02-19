@@ -8,7 +8,7 @@ class Solution(object):
         while carry == 1:
             digits = digits[::-1]
             for index,value in enumerate(digits):
-                print(value)
+                
                 
                 if value == 9:
                     carry = 1
