@@ -1,4 +1,4 @@
-# Your task is to write a function maskify,
+# function maskify,
 # which changes all but the last four characters into '#'.
 
 
