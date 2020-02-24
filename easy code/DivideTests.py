@@ -9,6 +9,9 @@ class Test(unittest.TestCase):
     def test_simple_case_1(self):
         self.assertEqual(4, divide(12, 3))
 
+    def test_uneven(self):
+        self.assertEqual(1, divide(10, 6))
+
     def test_long_number(self):
         self.assertEqual(9, divide(3279213, 364357))
 if __name__ == "__main__":

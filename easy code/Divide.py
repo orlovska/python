@@ -19,4 +19,4 @@ def divide (x , y) :
         # x  = 1001
         #     -0110
         #      0001
-    return result + x
+    return result 
