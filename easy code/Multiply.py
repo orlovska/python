@@ -7,7 +7,11 @@
 # These constraints i*ply, for example, that you cannot use 
 # increment or decrement, or test if r < y.
 # Hint: Add using bitwise operations; multiply using shift-and-add.
-
+#   10 (2)
+# * 11 (3)
+#   10
+# +100
+#  110 (6)
 def multiply(x, y):
  #   multiply(13, 9)  (1101, 1001)
    

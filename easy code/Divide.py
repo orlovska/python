@@ -18,16 +18,12 @@ def divide (x , y) :
             power -= 1
             # power1 = 31
             # power2 = 0
-        print(power)
         result += 1 << power
-        print(result)
         # result = 10, 11
         x -= y_power 
-        print(x)
         # x  = 1001
         #     -0110
         #      0011
     return result 
 
 
-print(divide(9,3))
