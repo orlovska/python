@@ -12,3 +12,6 @@ class Test(unittest.TestCase):
         
     def test_simple_case1(self):
         self.assertEquals(0, multiply(0, 2))
+
+if __name__ == "__main__":
+    unittest.main()
