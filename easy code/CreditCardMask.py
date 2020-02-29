@@ -7,9 +7,7 @@ def maskify(cc):
         return cc
     else:
         res = ""
-        for i in cc[:-4]:
-
-            res += "#"
+        res += "#" * len(cc[:-4])
         res += cc[-4:]
     return res
 
