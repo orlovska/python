@@ -12,7 +12,29 @@ def multiply(num1, num2):
             result[i+j] += result[i+j +1] // 10   # result[i+j] = 0, 0, 1 - > [0, 1, 15, 6], 0
             result[i+j + 1] %= 10                 # result -> [0, 0, 0, 6] -> [0, 0, 3, 6] -> [0, 1, 5, 6] -> [0, 7, 5, 6]
    
-    
-    result = result[next((i for i, x in enumerate(result) if x != 0), len(result)):] or [0]
-    # result[7:]
+    non_zero_digit_indexes = (idx for idx, x in enumerate(result) if x != 0)
+    #non_zero_digit_indexes = [1,2,3]
+    first_non_zero_idx = next(
+        non_zero_digit_indexes,
+        len(result)
+    )
+    #first_non_zero_idx = 1
+    result = result[first_non_zero_idx:] or [0]
+    # result[1:]
     return [sign * result[0]] + result[1:] # result = [-7, 6, 5]
+
+"""
+1) result = [0,9,8,7]
+> non_zero_digit_indexes = (idx for idx, x in enumerate(result) if x != 0) 
+non_zero_digit_indexes = [1,2,3]
+> next([1,2,3], 4) = 1
+first_non_zero_idx = 1
+
+2) result = [0,0]
+non_zero_digit_indexes = []
+first_non_zero_idx = next([], 2)
+result[first_non_zero_idx:] = result[2:] = []
+result = [] or anything = anything
+
+
+"""
